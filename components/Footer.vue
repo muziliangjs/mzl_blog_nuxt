@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="footer">
-      系统由 nuxtJs+NodeJs+Element Ui 驱动<br/> MZLiang.com
+      木子亮个人博客<br/>
+      mzliang.pro
     </div>
   </div>
 </template>

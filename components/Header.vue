@@ -38,7 +38,7 @@ export default {
       float: left;
       font-size: 20px;
       line-height: 30px;
-      color: @globalcColor;
+      color: @globalColor;
     }
     .nav {
       float: right;
