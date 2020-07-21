@@ -5,7 +5,7 @@ export default {
    */
   head: {
     // title: process.env.npm_package_name || '',
-    title: '木子亮个人博客',
+    title: '木子亮-专注前端开发',
     meta: [{
         charset: 'utf-8'
       },
@@ -65,8 +65,33 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+    // '@gauseen/nuxt-proxy'
   ],
+  // proxy: [
+  //   ['/api', {
+  //     target: 'http://localhost:8888'
+  //   }]
+  // ],
+
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    proxy: true, // 表示开启代理
+    //prefix: '/api', // 表示给请求url加个前缀 /api
+    credentials: true // 表示跨域请求时是否需要使用凭证
+  },
+  proxy: {
+    '/api': {
+      target: 'http://192.168.1.6:8888', // 目标接口域名
+      changeOrigin: true, // 表示是否跨域
+      pathRewrite: {
+        '^/api': '', // 把 /api 替换成‘’
+      }
+    }
+  },
+
   /*
    ** Build configuration
    */

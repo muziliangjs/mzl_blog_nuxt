@@ -1,18 +1,20 @@
 <template>
   <div class="header">
     <div class="header-center">
-      <div class="logo">木子亮个人博客</div>
+      <NLink to="/">
+        <div class="logo">木子亮</div>
+      </NLink>
       <div class="nav">
         <ul>
           <li>
-            <a href="#">首页</a>
+            <NLink to="/">首页</NLink>
           </li>
           <li>
-            <a href="#">标签</a>
+            <NLink to="/label">分类</NLink>
           </li>
-          <li>
-            <a href="#">关于</a>
-          </li>
+          <!-- <li>
+            <NLink to="/about">标签</NLink>
+          </li>-->
         </ul>
       </div>
     </div>

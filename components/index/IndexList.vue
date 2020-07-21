@@ -1,17 +1,26 @@
 <template>
-  <div class="index-item">
-    <div class="item-title">Taro多端统一框架基础免费教程</div>
+  <div class="index-item" @click="handleGoDetils(item.id)">
+    <div class="item-title">{{ item.title }}</div>
     <div class="item-icon">
-      <span>2020-01-02</span>
-      <span>node</span>
-      <span>100</span>
+      <span>{{ item.create_time }}</span>
+      <span>{{ item.label }}</span>
+      <!-- <span>100</span> -->
     </div>
-    <div class="item-content">随着微信小程序越来越火，其它平台也都推出了自己的小程序产品（支付宝、快应用、百度、抖音）。</div>
+    <div class="item-content">{{ item.description }}</div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    item: Object
+  },
+  methods: {
+    handleGoDetils(id) {
+      this.$router.push({ path: "/article/" + id });
+    }
+  }
+};
 </script>
 
 <style lang="less" scoped>
