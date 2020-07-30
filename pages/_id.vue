@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <el-row :gutter="24">
+    <el-row :gutter="24"> 
       <el-col :md="18" :sm="24">
         <div class="main-left">
           <div class="main-title">最新</div>
@@ -10,7 +10,7 @@
           <div
             class="articleData-list"
             v-if="articleList.length == 0 || articleList.length == count"
-          >{{ articleList.length > 0 ?'到底了~':'空空入也~' }}</div>
+          >{{ articleList.length > 0 ?'- 到底了 -':'空空入也~' }}</div>
         </div>
       </el-col>
       <el-col :md="6" class="hidden-sm-and-down" style="padding-left: 0">
@@ -31,9 +31,10 @@ export default {
   data() {
     return {
       page: 1,
-      lastPage: true
+      lastPage: true,
+      initialValue: "11" //markdown默认值
     };
-  },
+  }, 
   async asyncData({ params, error, $axios }) {
     try {
       const res = await $axios.post("/api/v1/article", { label_id: params.id });

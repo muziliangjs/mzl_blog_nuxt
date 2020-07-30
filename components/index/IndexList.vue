@@ -2,8 +2,14 @@
   <div class="index-item" @click="handleGoDetils(item.id)">
     <div class="item-title">{{ item.title }}</div>
     <div class="item-icon">
-      <span>{{ item.create_time }}</span>
-      <span>{{ item.label }}</span>
+      <span>
+        <img src="~/assets/images/time.png" />
+        {{ item.create_time }}
+      </span>
+      <span>
+        <img src="~/assets/images/tag.png" />
+        {{ item.label }}
+      </span>
       <!-- <span>100</span> -->
     </div>
     <div class="item-content">{{ item.description }}</div>
@@ -39,12 +45,20 @@ export default {
   }
   .item-icon {
     padding: 5px 0;
-    span {
+    span { 
       display: inline-block;
       margin-right: 20px;
       font-size: 14px;
-      line-height: 14px;
-      color: #999;
+      line-height: 20px;
+      color: #999; 
+      img { 
+        position: relative;
+        top: -1px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
     }
   }
   .item-content {

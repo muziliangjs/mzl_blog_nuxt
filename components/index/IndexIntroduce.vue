@@ -10,7 +10,7 @@
       木子亮
     </div>
     <div class="introduce-des">
-      专注于WEB和移动前端开发
+       WEB和移动前端开发 
     </div>
   </div>
 </template>

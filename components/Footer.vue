@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="footer">
-      mzliang.pro
+      我等采石之人，当心怀建造大教之愿景。
       <br />
 辽ICP备18001327号
     </div>
