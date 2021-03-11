@@ -12,6 +12,9 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.pageScroll);
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.pageScroll);
+  },
   methods: {
     pageScroll() {
       let jrscrollTop =

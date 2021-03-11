@@ -16,7 +16,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        // content: process.env.npm_package_description || '专注web前端和移动端开发'
+        content: '专注web前端和移动端开发'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords', 
+        content: '木子亮,专注前端开发,专注web前端和移动端开发'
       }
     ],
     link: [{

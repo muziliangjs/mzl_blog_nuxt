@@ -1,8 +1,8 @@
 {
   "name": "blog-nuxt",
   "version": "1.0.0",
-  "description": "My stunning Nuxt.js project",
-  "author": "jsbao",
+  "description": "专注web前端和移动端开发",
+  "author": "mzliang",
   "private": true,
   "config": {
     "nuxt": {
